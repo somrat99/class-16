@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --shadow-1: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --shadow-2: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --shadow-3: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+/* main-section */
+
+
+
+
+/* modal-section */
+.modal-section {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(./img/niloy-biswas-Dlzof0g5svo-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-content {
+
+    width: 500px;
+    height: auto;
+}
+
+.modal-content h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.modal-content p {
+    color: white;
+    font-size: 19px;
+}
+
+.modal-content a {
+    display: inline-block;
+    color: black;
+    background-color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: var(--shadow-2);
+}
+
+
+/* modal-stracture */
+.modal-strcture {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffffba;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100px);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-strcture.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-strcture-contant {
+    background-color: #fff;
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+}
+
+.modal-strcture-contant .modal-header {
+    padding: 12px 25px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-strcture-contant .modal-header .close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 33px;
+    padding: 5px 10px;
+    background-color: #ddd9;
+    border-radius: 50%;
+    line-height: 5px;
+    box-shadow: var(--shadow-2);
+}
+
+.modal-strcture-contant .modal-header h1 {}
+
+.modal-strcture-contant .modal-body {
+    padding: 12px 25px;
+}
+
+.modal-strcture-contant .modal-body p {}
+
+.modal-strcture-contant .modal-footer {
+    padding: 12px 25px;
+    border-top: 1px solid #ddd;
+}
+
+.modal-strcture-contant .modal-footer p {}
+
+
+
+/* custom-alert */
+
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.custom-alert .alert-container {
+    width: 548px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--shadow-2);
+}
+
+.custom-alert .alert-container .alert-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-alert .alert-container .alert-header h2 {}
+
+.custom-alert .alert-container .alert-header .close {
+    background-color: #dddddda8 !important;
+    border: none;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 6px;
+    cursor: pointer;
+}
+
+.custom-alert .alert-container .alert-body {
+    padding: 15px 20px;
+}
+
+.custom-alert .alert-container .alert-body p {
+    padding-bottom: 10px;
+}
+
+
+
+.custom-alert .alert-container .alert-body .btns {
+    text-align: right;
+}
+
+.custom-alert .alert-container .alert-body .btns a {
+    display: inline-block;
+
+}
+
+.custom-alert .alert-container .alert-body .btns a:nth-child(1) {
+    color: #1A6ED8;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.custom-alert .alert-container .alert-body .btns a:nth-child(2) {
+    background-color: #1A6ED8;
+    color: white;
+    padding: 8px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+
+/* accordion */
+
+.accordion-section {
+    background-color: aliceblue;
+    padding: 150px 0px;
+}
+
+.accordion-section .accordio-content {
+    width: 500px;
+
+    margin: auto;
+}
+
+.accordion-section .accordio-content .accordion-item {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-3);
+}
+
+.accordion-section .accordio-content .accordion-item .accordion-header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-section .accordio-content .accordion-item .accordion-header::after {
+    content: '\21E9';
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    transform: .4s;
+}
+
+.accordion-section .accordio-content .accordion-item .accordion-header.active::after {
+    transform: rotate(180deg);
+}
+
+.accordion-section .accordio-content .accordion-item .accordion-header h2 {}
+
+.accordion-section .accordio-content .accordion-item .accordion-body {
+    transition: .4s;
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion-section .accordio-content .accordion-item .accordion-body .accordion-body-content {
+    padding: 10px 20px;
+}
+
+.accordion-section .accordio-content .accordion-item .accordion-body .accordion-body-content p {}
